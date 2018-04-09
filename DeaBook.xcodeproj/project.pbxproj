@@ -11,6 +11,8 @@
 		202FE097207B7CF3004782C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202FE095207B7CF3004782C7 /* Main.storyboard */; };
 		202FE099207B7CF4004782C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202FE098207B7CF4004782C7 /* Assets.xcassets */; };
 		202FE09C207B7CF4004782C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202FE09A207B7CF4004782C7 /* LaunchScreen.storyboard */; };
+		202FE0A9207B80E7004782C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 202FE0A8207B80E7004782C7 /* GoogleService-Info.plist */; };
+		DEC5611303CAA03DE5F4256B /* Pods_DeaBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,10 @@
 		202FE098207B7CF4004782C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		202FE09B207B7CF4004782C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		202FE09D207B7CF4004782C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		202FE0A8207B80E7004782C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F78DBB0DB068BEA4674033 /* Pods-DeaBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeaBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook.release.xcconfig"; sourceTree = "<group>"; };
+		BE7033AFFFE3E73A6D61B403 /* Pods-DeaBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeaBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC5611303CAA03DE5F4256B /* Pods_DeaBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +45,8 @@
 			children = (
 				202FE090207B7CF2004782C7 /* DeaBook */,
 				202FE08F207B7CF2004782C7 /* Products */,
+				E941391D30B28FA46FC95914 /* Pods */,
+				D2304D7498E03F7DC3B83FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +75,7 @@
 		202FE0A3207B7D6B004782C7 /* Plists */ = {
 			isa = PBXGroup;
 			children = (
+				202FE0A8207B80E7004782C7 /* GoogleService-Info.plist */,
 				202FE09D207B7CF4004782C7 /* Info.plist */,
 			);
 			path = Plists;
@@ -101,6 +111,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D2304D7498E03F7DC3B83FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E941391D30B28FA46FC95914 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE7033AFFFE3E73A6D61B403 /* Pods-DeaBook.debug.xcconfig */,
+				50F78DBB0DB068BEA4674033 /* Pods-DeaBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 202FE0A0207B7CF4004782C7 /* Build configuration list for PBXNativeTarget "DeaBook" */;
 			buildPhases = (
+				296351C56D94436C4F56D6B3 /* [CP] Check Pods Manifest.lock */,
 				202FE08A207B7CF2004782C7 /* Sources */,
 				202FE08B207B7CF2004782C7 /* Frameworks */,
 				202FE08C207B7CF2004782C7 /* Resources */,
+				AC609AE3716D2FA6849B862E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,12 +189,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				202FE09C207B7CF4004782C7 /* LaunchScreen.storyboard in Resources */,
+				202FE0A9207B80E7004782C7 /* GoogleService-Info.plist in Resources */,
 				202FE099207B7CF4004782C7 /* Assets.xcassets in Resources */,
 				202FE097207B7CF3004782C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		296351C56D94436C4F56D6B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeaBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC609AE3716D2FA6849B862E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		202FE08A207B7CF2004782C7 /* Sources */ = {
@@ -314,15 +391,13 @@
 		};
 		202FE0A1207B7CF4004782C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7033AFFFE3E73A6D61B403 /* Pods-DeaBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HM7W758N94;
 				INFOPLIST_FILE = "$(SRCROOT)/DeaBook/Plists/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealoc.DeaBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -332,15 +407,13 @@
 		};
 		202FE0A2207B7CF4004782C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50F78DBB0DB068BEA4674033 /* Pods-DeaBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HM7W758N94;
 				INFOPLIST_FILE = "$(SRCROOT)/DeaBook/Plists/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealoc.DeaBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
