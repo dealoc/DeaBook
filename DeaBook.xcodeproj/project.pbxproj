@@ -12,6 +12,10 @@
 		202FE099207B7CF4004782C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202FE098207B7CF4004782C7 /* Assets.xcassets */; };
 		202FE09C207B7CF4004782C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202FE09A207B7CF4004782C7 /* LaunchScreen.storyboard */; };
 		202FE0A9207B80E7004782C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 202FE0A8207B80E7004782C7 /* GoogleService-Info.plist */; };
+		20B63036207B8281006C39B0 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63035207B8281006C39B0 /* ConnectionController.swift */; };
+		20B63038207B83BF006C39B0 /* BoutonDeabook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63037207B83BF006C39B0 /* BoutonDeabook.swift */; };
+		20B6303B207B8426006C39B0 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6303A207B8426006C39B0 /* Constantes.swift */; };
+		20B6303D207B849A006C39B0 /* LayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6303C207B849A006C39B0 /* LayerExtension.swift */; };
 		DEC5611303CAA03DE5F4256B /* Pods_DeaBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 		202FE09B207B7CF4004782C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		202FE09D207B7CF4004782C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		202FE0A8207B80E7004782C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		20B63035207B8281006C39B0 /* ConnectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
+		20B63037207B83BF006C39B0 /* BoutonDeabook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonDeabook.swift; sourceTree = "<group>"; };
+		20B6303A207B8426006C39B0 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
+		20B6303C207B849A006C39B0 /* LayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerExtension.swift; sourceTree = "<group>"; };
 		323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F78DBB0DB068BEA4674033 /* Pods-DeaBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeaBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook.release.xcconfig"; sourceTree = "<group>"; };
 		BE7033AFFFE3E73A6D61B403 /* Pods-DeaBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeaBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +69,7 @@
 		202FE090207B7CF2004782C7 /* DeaBook */ = {
 			isa = PBXGroup;
 			children = (
+				20B63039207B8413006C39B0 /* Ressources */,
 				202FE091207B7CF3004782C7 /* AppDelegate.swift */,
 				202FE0A7207B7D97004782C7 /* Model */,
 				202FE0A6207B7D93004782C7 /* View */,
@@ -93,6 +102,7 @@
 		202FE0A5207B7D84004782C7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				20B63035207B8281006C39B0 /* ConnectionController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,6 +110,8 @@
 		202FE0A6207B7D93004782C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				20B63037207B83BF006C39B0 /* BoutonDeabook.swift */,
+				20B6303C207B849A006C39B0 /* LayerExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +121,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		20B63039207B8413006C39B0 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				20B6303A207B8426006C39B0 /* Constantes.swift */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 		D2304D7498E03F7DC3B83FF8 /* Frameworks */ = {
@@ -250,6 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				202FE092207B7CF3004782C7 /* AppDelegate.swift in Sources */,
+				20B6303B207B8426006C39B0 /* Constantes.swift in Sources */,
+				20B63038207B83BF006C39B0 /* BoutonDeabook.swift in Sources */,
+				20B63036207B8281006C39B0 /* ConnectionController.swift in Sources */,
+				20B6303D207B849A006C39B0 /* LayerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +421,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HM7W758N94;
 				INFOPLIST_FILE = "$(SRCROOT)/DeaBook/Plists/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealoc.DeaBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -413,7 +440,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HM7W758N94;
 				INFOPLIST_FILE = "$(SRCROOT)/DeaBook/Plists/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealoc.DeaBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
