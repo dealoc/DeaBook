@@ -115,14 +115,95 @@
                     <view key="view" contentMode="scaleToFill" id="jWc-fb-HUJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gcl-gV-vmo">
+                                <rect key="frame" x="123" y="20" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="tj7-hS-7ME"/>
+                                    <constraint firstAttribute="height" constant="128" id="w5m-WA-67h"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-DU-ObF">
+                                <rect key="frame" x="20" y="168" width="295" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="FLc-tl-pTl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb7-LQ-TCv">
+                                <rect key="frame" x="20" y="210" width="295" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="YEU-xh-QTS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzu-ww-He5">
+                                <rect key="frame" x="323" y="210" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Ifc-j2-MGd"/>
+                                    <constraint firstAttribute="width" constant="32" id="aaw-6f-zCw"/>
+                                </constraints>
+                                <state key="normal" image="modifier"/>
+                                <connections>
+                                    <action selector="modifierProfilAction:" destination="vbz-cR-OpQ" eventType="touchUpInside" id="P6f-UE-tPv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIF-Kc-Kqo">
+                                <rect key="frame" x="323" y="168" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="8cJ-o0-yuN"/>
+                                    <constraint firstAttribute="width" constant="32" id="p6I-lJ-0Vv"/>
+                                </constraints>
+                                <state key="normal" image="modifier"/>
+                                <connections>
+                                    <action selector="modifierProfilAction:" destination="vbz-cR-OpQ" eventType="touchUpInside" id="WSz-Lu-dV5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fQ-gh-RIr" customClass="BoutonDeabook" customModule="DeaBook" customModuleProvider="target">
+                                <rect key="frame" x="20" y="494" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4y1-wi-V6T"/>
+                                </constraints>
+                                <state key="normal" title="Se déconnecter"/>
+                                <connections>
+                                    <action selector="decoAction:" destination="vbz-cR-OpQ" eventType="touchUpInside" id="2Gr-6q-YYO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.17254901959999999" green="0.58039215690000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hbt-DU-ObF" firstAttribute="top" secondItem="gcl-gV-vmo" secondAttribute="bottom" constant="20" id="6yB-Zu-LeA"/>
+                            <constraint firstItem="yb7-LQ-TCv" firstAttribute="top" secondItem="Hbt-DU-ObF" secondAttribute="bottom" constant="10" id="AmZ-OO-bE8"/>
+                            <constraint firstItem="bzQ-FV-Q8B" firstAttribute="trailing" secondItem="SIF-Kc-Kqo" secondAttribute="trailing" constant="20" id="Dps-2Q-mgZ"/>
+                            <constraint firstItem="yb7-LQ-TCv" firstAttribute="leading" secondItem="bzQ-FV-Q8B" secondAttribute="leading" constant="20" id="Ff5-4w-ocx"/>
+                            <constraint firstItem="Hbt-DU-ObF" firstAttribute="leading" secondItem="bzQ-FV-Q8B" secondAttribute="leading" constant="20" id="Hjr-cQ-YgL"/>
+                            <constraint firstItem="Rzu-ww-He5" firstAttribute="leading" secondItem="yb7-LQ-TCv" secondAttribute="trailing" constant="8" id="Iz9-Ei-Mh3"/>
+                            <constraint firstItem="bzQ-FV-Q8B" firstAttribute="trailing" secondItem="9fQ-gh-RIr" secondAttribute="trailing" constant="20" id="OYK-Tb-ox7"/>
+                            <constraint firstItem="bzQ-FV-Q8B" firstAttribute="trailing" secondItem="Rzu-ww-He5" secondAttribute="trailing" constant="20" id="bAg-EO-pAS"/>
+                            <constraint firstItem="SIF-Kc-Kqo" firstAttribute="centerY" secondItem="Hbt-DU-ObF" secondAttribute="centerY" id="dHZ-Ca-kJ0"/>
+                            <constraint firstItem="9fQ-gh-RIr" firstAttribute="leading" secondItem="bzQ-FV-Q8B" secondAttribute="leading" constant="20" id="hIw-zx-02j"/>
+                            <constraint firstItem="Rzu-ww-He5" firstAttribute="centerY" secondItem="yb7-LQ-TCv" secondAttribute="centerY" id="hNH-OS-uPk"/>
+                            <constraint firstItem="SIF-Kc-Kqo" firstAttribute="leading" secondItem="Hbt-DU-ObF" secondAttribute="trailing" constant="8" id="lDW-kh-Dto"/>
+                            <constraint firstItem="bzQ-FV-Q8B" firstAttribute="bottom" secondItem="9fQ-gh-RIr" secondAttribute="bottom" constant="20" id="qgR-Al-fuR"/>
+                            <constraint firstItem="gcl-gV-vmo" firstAttribute="top" secondItem="bzQ-FV-Q8B" secondAttribute="top" constant="20" id="sPb-9T-3eK"/>
+                            <constraint firstItem="gcl-gV-vmo" firstAttribute="centerX" secondItem="jWc-fb-HUJ" secondAttribute="centerX" id="xUb-uE-J0G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bzQ-FV-Q8B"/>
                     </view>
                     <navigationItem key="navigationItem" id="CPJ-ih-Jd5"/>
+                    <connections>
+                        <outlet property="nomLabel" destination="yb7-LQ-TCv" id="5Gm-fg-Xzo"/>
+                        <outlet property="photoDeProfil" destination="gcl-gV-vmo" id="dlB-zG-Zzv"/>
+                        <outlet property="prenomLabel" destination="Hbt-DU-ObF" id="bvo-X5-JUZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1a-ig-zZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2537" y="449"/>
+            <point key="canvasLocation" x="2536.8000000000002" y="448.42578710644682"/>
         </scene>
         <!--Fil Controller-->
         <scene sceneID="egD-c7-aMI">
@@ -203,5 +284,6 @@
         <image name="Profile" width="20" height="21"/>
         <image name="codabook_logo" width="482" height="376"/>
         <image name="fil" width="24" height="24"/>
+        <image name="modifier" width="24" height="24"/>
     </resources>
 </document>
