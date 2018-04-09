@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		202FE092207B7CF3004782C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FE091207B7CF3004782C7 /* AppDelegate.swift */; };
-		202FE094207B7CF3004782C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FE093207B7CF3004782C7 /* ViewController.swift */; };
 		202FE097207B7CF3004782C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202FE095207B7CF3004782C7 /* Main.storyboard */; };
 		202FE099207B7CF4004782C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202FE098207B7CF4004782C7 /* Assets.xcassets */; };
 		202FE09C207B7CF4004782C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202FE09A207B7CF4004782C7 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		202FE08E207B7CF2004782C7 /* DeaBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeaBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202FE091207B7CF3004782C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		202FE093207B7CF3004782C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		202FE096207B7CF3004782C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		202FE098207B7CF4004782C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		202FE09B207B7CF4004782C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,13 +53,52 @@
 			isa = PBXGroup;
 			children = (
 				202FE091207B7CF3004782C7 /* AppDelegate.swift */,
-				202FE093207B7CF3004782C7 /* ViewController.swift */,
-				202FE095207B7CF3004782C7 /* Main.storyboard */,
+				202FE0A7207B7D97004782C7 /* Model */,
+				202FE0A6207B7D93004782C7 /* View */,
+				202FE0A5207B7D84004782C7 /* Controller */,
+				202FE0A4207B7D78004782C7 /* Storyboards */,
+				202FE0A3207B7D6B004782C7 /* Plists */,
 				202FE098207B7CF4004782C7 /* Assets.xcassets */,
-				202FE09A207B7CF4004782C7 /* LaunchScreen.storyboard */,
-				202FE09D207B7CF4004782C7 /* Info.plist */,
 			);
 			path = DeaBook;
+			sourceTree = "<group>";
+		};
+		202FE0A3207B7D6B004782C7 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				202FE09D207B7CF4004782C7 /* Info.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		202FE0A4207B7D78004782C7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				202FE095207B7CF3004782C7 /* Main.storyboard */,
+				202FE09A207B7CF4004782C7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		202FE0A5207B7D84004782C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		202FE0A6207B7D93004782C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		202FE0A7207B7D97004782C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202FE094207B7CF3004782C7 /* ViewController.swift in Sources */,
 				202FE092207B7CF3004782C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HM7W758N94;
-				INFOPLIST_FILE = DeaBook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DeaBook/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HM7W758N94;
-				INFOPLIST_FILE = DeaBook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DeaBook/Plists/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
