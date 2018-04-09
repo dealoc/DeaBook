@@ -116,7 +116,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gcl-gV-vmo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gcl-gV-vmo" customClass="ImageRonde" customModule="DeaBook" customModuleProvider="target">
                                 <rect key="frame" x="123" y="20" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="tj7-hS-7ME"/>

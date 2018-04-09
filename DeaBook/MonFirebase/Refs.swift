@@ -15,9 +15,14 @@ class Refs {
     static let obtenir = Refs()
     
     let baseBDD = Database.database().reference()
+    let baseStockage = Storage.storage().reference()
     
     var baseUtilisateur: DatabaseReference {
         return baseBDD.child(UTILISATEUR)
+    }
+    
+    var basePhotoDeProfil: StorageReference {
+        return baseStockage.child(UTILISATEUR)
     }
     
 }
