@@ -16,6 +16,7 @@
 		20B63038207B83BF006C39B0 /* BoutonDeabook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63037207B83BF006C39B0 /* BoutonDeabook.swift */; };
 		20B6303B207B8426006C39B0 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6303A207B8426006C39B0 /* Constantes.swift */; };
 		20B6303D207B849A006C39B0 /* LayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6303C207B849A006C39B0 /* LayerExtension.swift */; };
+		20B6303F207B8FC8006C39B0 /* Alerte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6303E207B8FC8006C39B0 /* Alerte.swift */; };
 		DEC5611303CAA03DE5F4256B /* Pods_DeaBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		20B63037207B83BF006C39B0 /* BoutonDeabook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonDeabook.swift; sourceTree = "<group>"; };
 		20B6303A207B8426006C39B0 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		20B6303C207B849A006C39B0 /* LayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerExtension.swift; sourceTree = "<group>"; };
+		20B6303E207B8FC8006C39B0 /* Alerte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerte.swift; sourceTree = "<group>"; };
 		323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F78DBB0DB068BEA4674033 /* Pods-DeaBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeaBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook.release.xcconfig"; sourceTree = "<group>"; };
 		BE7033AFFFE3E73A6D61B403 /* Pods-DeaBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeaBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		202FE0A7207B7D97004782C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				20B6303E207B8FC8006C39B0 /* Alerte.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				20B6303B207B8426006C39B0 /* Constantes.swift in Sources */,
 				20B63038207B83BF006C39B0 /* BoutonDeabook.swift in Sources */,
 				20B63036207B8281006C39B0 /* ConnectionController.swift in Sources */,
+				20B6303F207B8FC8006C39B0 /* Alerte.swift in Sources */,
 				20B6303D207B849A006C39B0 /* LayerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
