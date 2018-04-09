@@ -30,6 +30,7 @@ class ConnectionController: UIViewController {
         super.viewDidAppear(animated)
         if let id = Auth.auth().currentUser?.uid {
             //Vérfifier si utilisateur dans BDD
+            verifierUtilisateur(id: id)
             //Passer à l'app
             
         } else {
@@ -49,8 +50,29 @@ class ConnectionController: UIViewController {
     }
         if let utilisateur = user {
             // Vérifier si l'utilisateur est dans la BDD
-            Alerte.montrer.erreur(message: "Utilisateur créé dans auth", controller: self)
+        verifierUtilisateur(id: utilisateur.uid)
         }
+    }
+    
+    func verifierUtilisateur(id: String) {
+        let referenceFirebase = Refs.obtenir.baseUtilisateur.child(id)
+        referenceFirebase.observe(.value) { (snapshot) in
+            if snapshot.exists() {
+                self.performSegue(withIdentifier: SEGUE_ID, sender: nil)
+            } else {
+                self.finalisation()
+            }
+        }
+    }
+    
+    func finalisation() {
+        Alerte.montrer.alerteTF(titre: FINALISER, message: DERNIER_PAS, array: [PRENOM,NOM], controller: self, completion: { (success) -> (Void) in
+            if let bool = success, bool == true {
+                
+            } else {
+                self.finalisation()
+            }
+        })
     }
         
     func cacher(_ bool: Bool) {
