@@ -15,6 +15,9 @@ class ProfilController: UIViewController, UIImagePickerControllerDelegate, UINav
     @IBOutlet weak var photoDeProfil: ImageRonde!
     @IBOutlet weak var prenomLabel: UILabel!
     @IBOutlet weak var nomLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+    @IBOutlet weak var paysLabel: UILabel!
+    @IBOutlet weak var villeLabel: UILabel!
     
     var profil: Utilisateur?
     var imagePicker = UIImagePickerController()
@@ -60,8 +63,37 @@ class ProfilController: UIViewController, UIImagePickerControllerDelegate, UINav
         guard let id = Auth.auth().currentUser?.uid else { return }
         let ref = Refs.obtenir.baseUtilisateur.child(id)
         ref.observe(.value) { (snapshot) in
-            if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM] {
-                let nouvelUtilisateur = Utilisateur(prenom: prenom, nom: nom, imageUrl: dict[IMAGE_URL])
+            if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM], let mail = dict[MAIL], let pays = dict[PAYS], let ville = dict[VILLE] {
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key, prenom: prenom, nom: nom, mail: mail, pays: pays, ville: ville, imageUrl: dict[IMAGE_URL])
+                self.profil = nouvelUtilisateur
+                self.miseAJourDonnees()
+                
+            } else if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM], let mail = dict[MAIL], let pays = dict[PAYS] {
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key,prenom: prenom, nom: nom, mail: mail, pays: pays, ville: nil, imageUrl: dict[IMAGE_URL])
+                self.profil = nouvelUtilisateur
+                self.miseAJourDonnees()
+            } else if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM], let mail = dict[MAIL], let ville = dict[VILLE] {
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key,prenom: prenom, nom: nom, mail: mail, pays: nil, ville: ville, imageUrl: dict[IMAGE_URL])
+                self.profil = nouvelUtilisateur
+                self.miseAJourDonnees()
+            } else if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM], let ville = dict[VILLE], let pays = dict[PAYS] {
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key,prenom: prenom, nom: nom, mail: nil, pays: pays, ville: ville, imageUrl: dict[IMAGE_URL])
+                self.profil = nouvelUtilisateur
+                self.miseAJourDonnees()
+            } else if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM], let mail = dict[MAIL] {
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key,prenom: prenom, nom: nom, mail: mail, pays: nil, ville: nil, imageUrl: dict[IMAGE_URL])
+                self.profil = nouvelUtilisateur
+                self.miseAJourDonnees()
+            } else if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM], let pays = dict[PAYS] {
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key,prenom: prenom, nom: nom, mail: nil, pays: pays, ville: nil, imageUrl: dict[IMAGE_URL])
+                self.profil = nouvelUtilisateur
+                self.miseAJourDonnees()
+            } else if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM], let ville = dict[VILLE] {
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key,prenom: prenom, nom: nom, mail: nil, pays: nil, ville: ville, imageUrl: dict[IMAGE_URL])
+                self.profil = nouvelUtilisateur
+                self.miseAJourDonnees()
+            } else if let dict = snapshot.value as? [String: String], let prenom = dict[PRENOM], let nom = dict[NOM] {
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key,prenom: prenom, nom: nom, mail: nil, pays: nil, ville: nil, imageUrl: dict[IMAGE_URL])
                 self.profil = nouvelUtilisateur
                 self.miseAJourDonnees()
             }
@@ -70,11 +102,51 @@ class ProfilController: UIViewController, UIImagePickerControllerDelegate, UINav
     }
     
     func miseAJourDonnees() {
-    guard profil != nil else { return }
-        prenomLabel.text = "Prénom:  " + self.profil!.prenom
-        nomLabel.text = "Nom:  " + self.profil!.nom
-        photoDeProfil.telecharger(self.profil!.imageUrl)
-    
+        if self.profil!.mail == nil, self.profil?.pays == nil, self.profil?.ville == nil {
+            prenomLabel.text = "Prénom:  " + self.profil!.prenom
+            nomLabel.text = "Nom:  " + self.profil!.nom
+            photoDeProfil.telecharger(self.profil!.imageUrl)
+        } else if self.profil?.pays == nil, self.profil?.ville == nil {
+            prenomLabel.text = "Prénom:  " + self.profil!.prenom
+            nomLabel.text = "Nom:  " + self.profil!.nom
+            mailLabel?.text = "Mail:  " + self.profil!.mail!
+            photoDeProfil.telecharger(self.profil!.imageUrl)
+        } else if self.profil?.pays == nil, self.profil?.mail == nil {
+            prenomLabel.text = "Prénom:  " + self.profil!.prenom
+            nomLabel.text = "Nom:  " + self.profil!.nom
+            villeLabel?.text = "Ville:  " + self.profil!.ville!
+            photoDeProfil.telecharger(self.profil!.imageUrl)
+        } else if self.profil?.ville == nil, self.profil?.mail == nil {
+            prenomLabel.text = "Prénom:  " + self.profil!.prenom
+            nomLabel.text = "Nom:  " + self.profil!.nom
+            paysLabel?.text = "Pays:  " + self.profil!.pays!
+            photoDeProfil.telecharger(self.profil!.imageUrl)
+        } else if self.profil?.ville == nil {
+            prenomLabel.text = "Prénom:  " + self.profil!.prenom
+            nomLabel.text = "Nom:  " + self.profil!.nom
+            mailLabel?.text = "Mail:  " + self.profil!.mail!
+            paysLabel.text = "Pays:  " + self.profil!.pays!
+            photoDeProfil.telecharger(self.profil!.imageUrl)
+        } else if self.profil?.pays == nil {
+            prenomLabel.text = "Prénom:  " + self.profil!.prenom
+            nomLabel.text = "Nom:  " + self.profil!.nom
+            mailLabel?.text = "Mail:  " + self.profil!.mail!
+            villeLabel.text = "Ville:  " + self.profil!.ville!
+            photoDeProfil.telecharger(self.profil!.imageUrl)
+        } else if self.profil?.mail == nil {
+            prenomLabel.text = "Prénom:  " + self.profil!.prenom
+            nomLabel.text = "Nom:  " + self.profil!.nom
+            villeLabel?.text = "Ville:  " + self.profil!.ville!
+            paysLabel.text = "Pays:  " + self.profil!.pays!
+            photoDeProfil.telecharger(self.profil!.imageUrl)
+        } else {
+            prenomLabel.text = "Prénom:  " + self.profil!.prenom
+            nomLabel.text = "Nom:  " + self.profil!.nom
+            mailLabel?.text = "Mail:  " + self.profil!.mail!
+            paysLabel.text = "Pays:  " + self.profil!.pays!
+            villeLabel.text = "Ville:  " + self.profil!.ville!
+            photoDeProfil.telecharger(self.profil!.imageUrl)
+        }
     }
     
     @IBAction func modifierProfilAction(_ sender: Any) {
@@ -83,6 +155,9 @@ class ProfilController: UIViewController, UIImagePickerControllerDelegate, UINav
             switch bouton.tag {
             case 0: array.append(PRENOM)
             case 1: array.append(NOM)
+            case 2: array.append(MAIL)
+            case 3: array.append(PAYS)
+            case 4: array.append(VILLE)
             default: break
             }
             guard array.count == 1 else { return }

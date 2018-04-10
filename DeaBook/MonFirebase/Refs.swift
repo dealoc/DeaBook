@@ -24,5 +24,13 @@ class Refs {
     var basePhotoDeProfil: StorageReference {
         return baseStockage.child(UTILISATEUR)
     }
+ 
+    var basePost: DatabaseReference {
+        return baseBDD.child(POST)
+    }
+ 
+    var basePhotoDuPost: StorageReference {
+        return baseStockage.child(POST)
+    }
     
 }
