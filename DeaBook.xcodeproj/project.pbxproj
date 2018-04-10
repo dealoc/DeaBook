@@ -28,6 +28,7 @@
 		20B63052207BBAB1006C39B0 /* VueDeaBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63051207BBAB1006C39B0 /* VueDeaBook.swift */; };
 		20B63054207BBC9A006C39B0 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63053207BBC9A006C39B0 /* PostController.swift */; };
 		20B63058207CB5CC006C39B0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63057207CB5CC006C39B0 /* Post.swift */; };
+		20B6305A207CB817006C39B0 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63059207CB817006C39B0 /* PostCell.swift */; };
 		DEC5611303CAA03DE5F4256B /* Pods_DeaBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		20B63051207BBAB1006C39B0 /* VueDeaBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueDeaBook.swift; sourceTree = "<group>"; };
 		20B63053207BBC9A006C39B0 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		20B63057207CB5CC006C39B0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		20B63059207CB817006C39B0 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		323DC5FC7A089C643D58D5DC /* Pods_DeaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F78DBB0DB068BEA4674033 /* Pods-DeaBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeaBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook.release.xcconfig"; sourceTree = "<group>"; };
 		BE7033AFFFE3E73A6D61B403 /* Pods-DeaBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeaBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeaBook/Pods-DeaBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				20B6304D207BB17D006C39B0 /* ImageRonde.swift */,
 				20B6304F207BB219006C39B0 /* ExtensionUIImageView.swift */,
 				20B63051207BBAB1006C39B0 /* VueDeaBook.swift */,
+				20B63059207CB817006C39B0 /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				20B63050207BB219006C39B0 /* ExtensionUIImageView.swift in Sources */,
 				202FE092207B7CF3004782C7 /* AppDelegate.swift in Sources */,
 				20B63058207CB5CC006C39B0 /* Post.swift in Sources */,
+				20B6305A207CB817006C39B0 /* PostCell.swift in Sources */,
 				20B63048207B9B83006C39B0 /* FilController.swift in Sources */,
 				20B6303B207B8426006C39B0 /* Constantes.swift in Sources */,
 				20B6304E207BB17D006C39B0 /* ImageRonde.swift in Sources */,
